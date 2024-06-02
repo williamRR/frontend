@@ -1,4 +1,5 @@
-git clone
-cd 
-yarn
-yarn dev
+git clone  \n
+
+cd \n
+yarn \n
+yarn dev \n
