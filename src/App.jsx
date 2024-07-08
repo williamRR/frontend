@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import API from './utils/axiosConfig';
 import {
   Button,
@@ -18,17 +18,7 @@ import {
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  boxShadow: 24,
-  p: 4,
-};
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -105,7 +95,18 @@ function App() {
       }}
     >
       <Modal open={modalOpen} onClose={handleClose}>
-        <Box sx={style}>
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: 400,
+            bgcolor: 'background.paper',
+            boxShadow: 24,
+            p: 4,
+          }}
+        >
           <form onSubmit={handleSubmit}>
             {headers.map(
               (header) =>
@@ -144,6 +145,14 @@ function App() {
                   <TableCell key={header}>{event[header]}</TableCell>
                 ))}
                 <TableCell>
+                  <IconButton
+                    color='primary'
+                    aria-label='buy'
+                    onClick={() => alert('entrada comprada')}
+                  >
+                    <AttachMoneyIcon />
+                  </IconButton>
+
                   <IconButton
                     color='primary'
                     aria-label='edit'
