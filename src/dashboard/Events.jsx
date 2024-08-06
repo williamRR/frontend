@@ -29,7 +29,16 @@ export const Events = () => {
   const fetchEvents = async () => {
     try {
       const response = await API.get('/events');
-      setEvents(response.data);
+      console.log(response.data);
+
+      const myEvents = response.data.map((event) => {
+        // quitar los campos eventCategory y eventLocation (relaciones con events)
+        delete event.eventCategory;
+        delete event.eventLocation;
+        return event;
+      })
+
+      setEvents(myEvents);
     } catch (error) {
       console.error('Error al hacer la solicitud:', error);
     }
