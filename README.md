@@ -1,17 +1,21 @@
-git clone  
 
-cd 
+## React + TailwindCSS + Vercel
 
+```bash
+> git clone {url-repositorio}  
+> cd {proyect}
 
-yarn 
+# Instalar dependencias
+> yarn
+# Correr el proyecto 
+> yarn dev 
 
-yarn dev 
+# 👉 commits and deploy
 
-
-// commits and deploy
-
+# Para hacer deploy en Vercel
 yarn build
 vercel --prod
+```
 
 ---
 
