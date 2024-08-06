@@ -1,7 +1,8 @@
 import axios, { AxiosInstance } from 'axios';
 
 const API: AxiosInstance = axios.create({
-  baseURL: 'https://camwilcariva-ids36lbjca-uc.a.run.app/',
+  // baseURL: 'https://camwilcariva-ids36lbjca-uc.a.run.app/',
+  baseURL: 'http://localhost:8080/',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',

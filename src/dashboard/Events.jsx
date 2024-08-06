@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import API from './utils/axiosConfig';
+import API from '../utils/axiosConfig';
 import {
   Button,
   Container,
@@ -20,7 +20,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
-function App() {
+export const Events = () => {
   const [events, setEvents] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
@@ -129,7 +129,7 @@ function App() {
         </Box>
       </Modal>
       <TableContainer component={Paper}>
-        <Table>
+        <Table className="bg-orange-400">
           <TableHead>
             <TableRow>
               {headers.map((header) => (
@@ -185,5 +185,3 @@ function App() {
     </Container>
   );
 }
-
-export default App;
