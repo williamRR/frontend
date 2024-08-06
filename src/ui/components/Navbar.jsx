@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import logoIvcaWica from '../../assets/img/logo-ivcawica-v2.png'
 // import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../auth/context/AuthContext'
 
@@ -27,7 +28,7 @@ export const Navbar = () => {
           className='flex items-center space-x-3 rtl:space-x-reverse'
         >
           <img
-            src='./img/logo-ivcawica-v2.png'
+            src={logoIvcaWica}
             className='h-28 mb-0 md:-mb-12'
             alt='logo'
           />

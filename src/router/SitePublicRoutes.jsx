@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { Navbar } from '../ui/components/Navbar'
-import { EventOverviewPage, IndexPage, LoginPage, NotFoundPage } from '../pages'
+import { EventOverviewPage, IndexPage, LoginPage, NotFoundPage, CheckoutPage } from '../pages'
 
 export const SitePublicRoutes = () => {
   return (
@@ -12,6 +12,7 @@ export const SitePublicRoutes = () => {
         <Route path='login' element={<LoginPage />} />
         <Route path='index' element={<IndexPage />} />
         <Route path='event-overview/:id' element={<EventOverviewPage />} />
+        <Route path='checkout' element={<CheckoutPage />} />
         <Route path='404' element={<NotFoundPage />} />
 
         <Route path='/' element={<Navigate to='index' replace />} />

@@ -82,8 +82,6 @@ export const IndexPage = () => {
     fetchEventByLocation()
   }, [])
 
-  // TODO: Listar los eventos por ubicación
-
   return (
     <>
       <SearchEvent />
