@@ -12,7 +12,6 @@ export const IndexPage = () => {
   const [ feriasEvents, setFeriasEvents ] = useState([])
   const [ eventLocations, setEventLocations ] = useState([])
 
-  // // TODO: Listar los eventos recomendados (random)
   const fetchRecommendedEvents = async () => {
     try {
       const response = await API.get('/events/random')
@@ -84,13 +83,15 @@ export const IndexPage = () => {
 
   return (
     <>
-      <SearchEvent />
+      {/* <SearchEvent /> */}
       <MainContent>
-        <SectionEvent sectionTitle='Eventos Recomendados' events={recommendedEvents} />
-        <SectionEvent sectionTitle='Música' events={musicEvents} />
-        <SectionEvent sectionTitle='Artes y Teatro' events={artsEvents} />
-        <SectionEvent sectionTitle='Ferias y Expo' events={feriasEvents} />
-        <EventByLocation eventLocations={eventLocations} />
+        <div className="mt-52">
+          <SectionEvent sectionTitle='Eventos Recomendados' events={recommendedEvents} />
+          <SectionEvent sectionTitle='Música' events={musicEvents} />
+          <SectionEvent sectionTitle='Artes y Teatro' events={artsEvents} />
+          <SectionEvent sectionTitle='Ferias y Expo' events={feriasEvents} />
+          <EventByLocation eventLocations={eventLocations} />
+        </div>
       </MainContent>
     </>
   )
